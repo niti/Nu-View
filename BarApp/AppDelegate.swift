@@ -14,10 +14,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+    /* Changed
+    
+    application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
+    
+    to
+    
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
+    
+    */
+    
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
+        
+        
+        
+        Parse.setApplicationId("ob4d8n1TNor1eUTZ4hmQjFhC7w58cifNLMTBJ7Zh", clientKey: "o9zu5lMz0AjOY2E0oVzpEnvXq8hxNZbqJzPhqbWt")
+        
+        PFFacebookUtils.initializeFacebook()
+        //FBLoginView()
+        //FBProfilePictureView()
+        
+        application.setStatusBarStyle(UIStatusBarStyle.LightContent, animated: false)
+        
+        
         return true
     }
+    
+
+    
+    
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -33,12 +58,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     }
 
-    func applicationDidBecomeActive(application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    }
+//    func applicationDidBecomeActive(application: UIApplication) {
+//        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+//        
+//        // Logs 'install' and 'app activate' App Events.
+//        FBAppEvents.activateApp()
+//        
+//    }
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    
+    /*  Changed
+    
+    func application(application: UIApplication, openURL url: NSURL,
+    sourceApplication: NSString, annotation: AnyObject) -> Bool {
+    
+    to
+    
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
+    
+    */
+    
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
+        
+        return FBAppCall.handleOpenURL(url, sourceApplication:sourceApplication,
+            withSession:PFFacebookUtils.session())
+    }
+    
+    func applicationDidBecomeActive(application: UIApplication) {
+        
+        FBAppCall.handleDidBecomeActiveWithSession(PFFacebookUtils.session())
+        
     }
 
 

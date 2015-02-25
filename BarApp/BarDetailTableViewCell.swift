@@ -10,6 +10,8 @@ import UIKit
 
 class BarDetailTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var profilePicture: UIImageView!
+    @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var barDetailImageCell: UIImageView!
     
     override func awakeFromNib() {
@@ -25,6 +27,20 @@ class BarDetailTableViewCell: UITableViewCell {
     
     func loadImage(image: String) {
         barDetailImageCell.image = UIImage(named: image)
+        
+        if PFUser.currentUser() != nil {
+            let user = PFUser.currentUser()
+            //println(user["imageData"])
+            
+            if let data: NSData = user["image"] as? NSData {
+                profilePicture.image = UIImage(data: data)
+            }
+            userName.text = user["name"] as? String
+        }
+        
+        else {
+            println("No User")
+        }
     }
 
 }

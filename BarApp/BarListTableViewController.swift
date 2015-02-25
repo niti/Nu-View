@@ -14,10 +14,34 @@ class BarListTableViewController: UITableViewController {
     var imageNamesArray: [String] = []
     var imagesArray: [UIImage] = []
     var barImageViewsArray: [UIImageView] = []
+    //var user: PFObject?
     
+    @IBAction func logoutButtonPressed(sender: AnyObject) {        
+        PFUser.logOut()
+        self.navigationController?.popToRootViewControllerAnimated(true)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        Parse.setApplicationId("ob4d8n1TNor1eUTZ4hmQjFhC7w58cifNLMTBJ7Zh", clientKey: "o9zu5lMz0AjOY2E0oVzpEnvXq8hxNZbqJzPhqbWt")
+//        
+//        var score = PFObject(className: "score")
+//        score.setObject("Rob", forKey: "name")
+//        score.setObject(95, forKey: "number")
+//        score.saveInBackgroundWithBlock {
+//            (success: Bool!, error: NSError!) -> Void in
+//            }
+//        
+//        var query = PFQuery(className: "score")
+//        
+//        
+        
+        //PFUser.logOut()
+
+        if PFUser.currentUser()["name"] == nil {
+           self.loadData() 
+        }
         
         let barsLibrary = BarLibrary().library
         for dictionary in barsLibrary {
@@ -37,6 +61,11 @@ class BarListTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    override func viewWillAppear(animated: Bool){
+        self.navigationController?.navigationBarHidden = false
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "navbar.png"), forBarMetrics: .Default)
     }
 
     override func didReceiveMemoryWarning() {
@@ -85,6 +114,7 @@ class BarListTableViewController: UITableViewController {
             }
             
         }
+
     }
     
     func handleTap(recognizer: UITapGestureRecognizer) {
@@ -98,8 +128,58 @@ class BarListTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView,
         estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-            return 88;
+            return 87;
     }
+    
+    
+    func loadData() {
+        
+        println("Getting Data")
+        
+        var user = PFUser.currentUser()
+        var FBSession = PFFacebookUtils.session()
+        var accessToken = FBSession.accessTokenData.accessToken
+        let url = NSURL(string: "https://graph.facebook.com/me/picture?type=large&return_ssl_resources=1&access_token="+accessToken)
+        
+        // Update - changed url to url!
+        
+        let urlRequest = NSURLRequest(URL: url!)
+        
+        NSURLConnection.sendAsynchronousRequest(urlRequest, queue: NSOperationQueue.mainQueue(), completionHandler: {
+            response, data, error in
+            
+            //println(data)
+            
+            if data != nil {
+                user["image"] = data
+            }
+            
+            user.save()
+            
+            FBRequestConnection.startForMeWithCompletionHandler({
+                connection, result, error in
+                
+                //println(result["name"])
+                
+                if result != nil {
+                    user["name"] = result["name"]
+                }
+                
+                //println(user["name"])
+                
+                //self.nameLabel.text = user["name"] as? String
+                
+                user.save()
+                //println(result)
+                
+                
+            })
+            
+        })
+        
+        
+    }
+
     
     
 
