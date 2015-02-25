@@ -12,7 +12,7 @@ class BarDetailTableViewController: UITableViewController {
 
     @IBOutlet weak var barDetailLogo: UIImageView!
     
-    var bar: Bar?
+    var bar: Bar? //instance 
     
     var imageViewsArray: [UIImageView] = []
     var imageNamesArray: [String] = []
@@ -25,9 +25,31 @@ class BarDetailTableViewController: UITableViewController {
             //imageNamesArray = bar!.imageNamesArray
         }
         
-        imageNamesArray = ["image0.png", "image1.png", "image2.png", "image3.png", "image4.png"]
+        var query1 = PFQuery(className: "BarPictures")
+        var count = query1.countObjects()
         
-
+//       
+//        imageNamesArray = ["image0.png", "image1.png", "image2.png", "image3.png", "image4.png", "image5.png" ]
+        
+        var query = PFQuery(className:"BarPictures")
+        query.addDescendingOrder("createdAt")
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]!, error: NSError!) -> Void in
+            if error == nil {
+                // The find succeeded.
+                
+                // Do something with the found objects
+                for object in objects {
+                    self.imageNamesArray.append(object.objectId)
+                    //println(object.objectId)
+                    
+                }
+            } else {
+                // Log details of the failure
+                println("error")
+                //NSLog("Error: %@ %@", error, error.userInfo!)
+            }
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -53,7 +75,6 @@ class BarDetailTableViewController: UITableViewController {
         // Return the number of rows in the section.
         return imageNamesArray.count
     }
-
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> BarDetailTableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("barDetailTableCell", forIndexPath: indexPath) as BarDetailTableViewCell
@@ -68,7 +89,6 @@ class BarDetailTableViewController: UITableViewController {
             return 310;
     }
     
-
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

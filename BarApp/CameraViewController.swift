@@ -42,14 +42,12 @@ class CameraViewController: UIViewController {
                     }
                 }
             }
-            
         }
         
         func focusTo(value : Float) {
             if let device = captureDevice {
                 if(device.lockForConfiguration(nil)) {
                     device.setFocusModeLockedWithLensPosition(value, completionHandler: { (time) -> Void in
-                        //
                     })
                     device.unlockForConfiguration()
                 }

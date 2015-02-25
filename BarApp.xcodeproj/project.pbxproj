@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D348ED11A9AEAF40068F606 /* BarLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D348ED01A9AEAF40068F606 /* BarLibrary.swift */; };
+		9D348ED31A9AEB0D0068F606 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D348ED21A9AEB0D0068F606 /* Parse.framework */; };
+		9D348ED51A9AEB480068F606 /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D348ED41A9AEB480068F606 /* PictureViewController.swift */; };
+		9D98F3491A9AEC1500C640B3 /* BarApp-BridgingFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D98F3481A9AEC1500C640B3 /* BarApp-BridgingFile.m */; };
+		9D98F35D1A9AEDA900C640B3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D98F3581A9AED4500C640B3 /* Security.framework */; };
+		9D98F35E1A9AEDC300C640B3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D98F34A1A9AED0E00C640B3 /* AudioToolbox.framework */; };
+		9D98F35F1A9AEDCB00C640B3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D98F34C1A9AED1400C640B3 /* CFNetwork.framework */; };
+		9D98F3601A9AEDD200C640B3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D98F34E1A9AED1A00C640B3 /* CoreGraphics.framework */; };
+		9D98F3611A9AEDDA00C640B3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D98F3501A9AED2200C640B3 /* CoreLocation.framework */; };
+		9D98F3621A9AEDE100C640B3 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D98F3521A9AED2C00C640B3 /* libz.1.1.3.dylib */; };
+		9D98F3631A9AEDE800C640B3 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D98F3541A9AED3400C640B3 /* MobileCoreServices.framework */; };
+		9D98F3641A9AEDEF00C640B3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D98F3561A9AED3C00C640B3 /* QuartzCore.framework */; };
+		9D98F3651A9AEDFC00C640B3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D98F35A1A9AED5000C640B3 /* SystemConfiguration.framework */; };
+		9D98F3671A9AEE7400C640B3 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D98F3661A9AEE7400C640B3 /* Accounts.framework */; };
+		9D98F3691A9AEE7B00C640B3 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D98F3681A9AEE7B00C640B3 /* Social.framework */; };
+		9D98F36B1A9AEEC100C640B3 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D98F36A1A9AEEC100C640B3 /* libsqlite3.0.dylib */; };
+		9D98F36D1A9AEF2400C640B3 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D98F36C1A9AEF2300C640B3 /* Bolts.framework */; };
 		C290C4FC1A93B4EE00177A63 /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C290C4FB1A93B4EE00177A63 /* Bar.swift */; };
 		C290C5061A953BE300177A63 /* BarDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C290C5051A953BE300177A63 /* BarDetailTableViewController.swift */; };
 		C290C5081A953BFA00177A63 /* BarDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C290C5071A953BFA00177A63 /* BarDetailTableViewCell.swift */; };
@@ -18,7 +35,6 @@
 		C2A930881A8F0A4F00EAB993 /* BarAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A930871A8F0A4F00EAB993 /* BarAppTests.swift */; };
 		C2D211251A990B1A0089D5A2 /* BarListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D211241A990B1A0089D5A2 /* BarListTableViewController.swift */; };
 		C2D211271A990B370089D5A2 /* BarListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D211261A990B370089D5A2 /* BarListTableViewCell.swift */; };
-		C2D211291A99176B0089D5A2 /* BarLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D211281A99176B0089D5A2 /* BarLibrary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +48,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9D348ED01A9AEAF40068F606 /* BarLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarLibrary.swift; sourceTree = "<group>"; };
+		9D348ED21A9AEB0D0068F606 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		9D348ED41A9AEB480068F606 /* PictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
+		9D98F3471A9AEC1500C640B3 /* BarApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BarApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		9D98F3481A9AEC1500C640B3 /* BarApp-BridgingFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BarApp-BridgingFile.m"; sourceTree = "<group>"; };
+		9D98F34A1A9AED0E00C640B3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		9D98F34C1A9AED1400C640B3 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		9D98F34E1A9AED1A00C640B3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9D98F3501A9AED2200C640B3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		9D98F3521A9AED2C00C640B3 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		9D98F3541A9AED3400C640B3 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		9D98F3561A9AED3C00C640B3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9D98F3581A9AED4500C640B3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		9D98F35A1A9AED5000C640B3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		9D98F3661A9AEE7400C640B3 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		9D98F3681A9AEE7B00C640B3 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		9D98F36A1A9AEEC100C640B3 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		9D98F36C1A9AEF2300C640B3 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		C290C4FB1A93B4EE00177A63 /* Bar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
 		C290C5051A953BE300177A63 /* BarDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BarDetailTableViewController.swift; path = ../BarDetailTableViewController.swift; sourceTree = "<group>"; };
 		C290C5071A953BFA00177A63 /* BarDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BarDetailTableViewCell.swift; path = ../BarDetailTableViewCell.swift; sourceTree = "<group>"; };
@@ -47,7 +81,6 @@
 		C2A930871A8F0A4F00EAB993 /* BarAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarAppTests.swift; sourceTree = "<group>"; };
 		C2D211241A990B1A0089D5A2 /* BarListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarListTableViewController.swift; sourceTree = "<group>"; };
 		C2D211261A990B370089D5A2 /* BarListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarListTableViewCell.swift; sourceTree = "<group>"; };
-		C2D211281A99176B0089D5A2 /* BarLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BarLibrary.swift; path = ../../../../../.Trash/BarLibrary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +88,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D98F36B1A9AEEC100C640B3 /* libsqlite3.0.dylib in Frameworks */,
+				9D98F3691A9AEE7B00C640B3 /* Social.framework in Frameworks */,
+				9D98F3671A9AEE7400C640B3 /* Accounts.framework in Frameworks */,
+				9D98F3651A9AEDFC00C640B3 /* SystemConfiguration.framework in Frameworks */,
+				9D98F3641A9AEDEF00C640B3 /* QuartzCore.framework in Frameworks */,
+				9D98F3631A9AEDE800C640B3 /* MobileCoreServices.framework in Frameworks */,
+				9D98F3621A9AEDE100C640B3 /* libz.1.1.3.dylib in Frameworks */,
+				9D98F3611A9AEDDA00C640B3 /* CoreLocation.framework in Frameworks */,
+				9D98F3601A9AEDD200C640B3 /* CoreGraphics.framework in Frameworks */,
+				9D98F35F1A9AEDCB00C640B3 /* CFNetwork.framework in Frameworks */,
+				9D98F35E1A9AEDC300C640B3 /* AudioToolbox.framework in Frameworks */,
+				9D98F35D1A9AEDA900C640B3 /* Security.framework in Frameworks */,
+				9D348ED31A9AEB0D0068F606 /* Parse.framework in Frameworks */,
+				9D98F36D1A9AEF2400C640B3 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,9 +115,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D98F35C1A9AED5900C640B3 /* Other Parse Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Other Parse Frameworks";
+			sourceTree = "<group>";
+		};
 		C2A930631A8F0A4D00EAB993 = {
 			isa = PBXGroup;
 			children = (
+				9D98F36A1A9AEEC100C640B3 /* libsqlite3.0.dylib */,
+				9D98F3681A9AEE7B00C640B3 /* Social.framework */,
+				9D98F3661A9AEE7400C640B3 /* Accounts.framework */,
+				9D98F35A1A9AED5000C640B3 /* SystemConfiguration.framework */,
+				9D98F3581A9AED4500C640B3 /* Security.framework */,
+				9D98F3561A9AED3C00C640B3 /* QuartzCore.framework */,
+				9D98F3541A9AED3400C640B3 /* MobileCoreServices.framework */,
+				9D98F3521A9AED2C00C640B3 /* libz.1.1.3.dylib */,
+				9D98F3501A9AED2200C640B3 /* CoreLocation.framework */,
+				9D98F34E1A9AED1A00C640B3 /* CoreGraphics.framework */,
+				9D98F34C1A9AED1400C640B3 /* CFNetwork.framework */,
+				9D98F34A1A9AED0E00C640B3 /* AudioToolbox.framework */,
+				9D98F35C1A9AED5900C640B3 /* Other Parse Frameworks */,
 				C2A9306E1A8F0A4E00EAB993 /* BarApp */,
 				C2A930841A8F0A4E00EAB993 /* BarAppTests */,
 				C2A9306D1A8F0A4E00EAB993 /* Products */,
@@ -89,18 +156,23 @@
 		C2A9306E1A8F0A4E00EAB993 /* BarApp */ = {
 			isa = PBXGroup;
 			children = (
+				9D98F36C1A9AEF2300C640B3 /* Bolts.framework */,
+				9D348ED21A9AEB0D0068F606 /* Parse.framework */,
+				9D348ED01A9AEAF40068F606 /* BarLibrary.swift */,
 				C2D211241A990B1A0089D5A2 /* BarListTableViewController.swift */,
 				C2D211261A990B370089D5A2 /* BarListTableViewCell.swift */,
 				C290C5051A953BE300177A63 /* BarDetailTableViewController.swift */,
 				C290C5071A953BFA00177A63 /* BarDetailTableViewCell.swift */,
 				C290C5091A96348700177A63 /* CameraViewController.swift */,
-				C2D211281A99176B0089D5A2 /* BarLibrary.swift */,
 				C290C4FB1A93B4EE00177A63 /* Bar.swift */,
 				C2A930711A8F0A4E00EAB993 /* AppDelegate.swift */,
 				C2A930751A8F0A4E00EAB993 /* Main.storyboard */,
 				C2A930781A8F0A4E00EAB993 /* Images.xcassets */,
 				C2A9307A1A8F0A4E00EAB993 /* LaunchScreen.xib */,
 				C2A9306F1A8F0A4E00EAB993 /* Supporting Files */,
+				9D348ED41A9AEB480068F606 /* PictureViewController.swift */,
+				9D98F3481A9AEC1500C640B3 /* BarApp-BridgingFile.m */,
+				9D98F3471A9AEC1500C640B3 /* BarApp-Bridging-Header.h */,
 			);
 			path = BarApp;
 			sourceTree = "<group>";
@@ -232,11 +304,13 @@
 			files = (
 				C290C4FC1A93B4EE00177A63 /* Bar.swift in Sources */,
 				C290C50A1A96348700177A63 /* CameraViewController.swift in Sources */,
+				9D348ED11A9AEAF40068F606 /* BarLibrary.swift in Sources */,
 				C290C5061A953BE300177A63 /* BarDetailTableViewController.swift in Sources */,
 				C290C5081A953BFA00177A63 /* BarDetailTableViewCell.swift in Sources */,
 				C2D211251A990B1A0089D5A2 /* BarListTableViewController.swift in Sources */,
-				C2D211291A99176B0089D5A2 /* BarLibrary.swift in Sources */,
 				C2D211271A990B370089D5A2 /* BarListTableViewCell.swift in Sources */,
+				9D98F3491A9AEC1500C640B3 /* BarApp-BridgingFile.m in Sources */,
+				9D348ED51A9AEB480068F606 /* PictureViewController.swift in Sources */,
 				C2A930721A8F0A4E00EAB993 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,9 +434,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BarApp",
+				);
 				INFOPLIST_FILE = BarApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BarApp/BarApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -370,9 +451,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BarApp",
+				);
 				INFOPLIST_FILE = BarApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BarApp/BarApp-Bridging-Header.h";
 			};
 			name = Release;
 		};

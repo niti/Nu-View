@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="m0n-wW-OZ5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="m0n-wW-OZ5">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -45,13 +45,7 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e0V-bk-Ttt" id="2PT-FQ-YIg">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image0" translatesAutoresizingMaskIntoConstraints="NO" id="4FQ-rU-z37">
-                                            <rect key="frame" x="35" y="40" width="250" height="250"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" secondItem="4FQ-rU-z37" secondAttribute="height" multiplier="1:1" id="Jt5-GA-rie"/>
-                                            </constraints>
-                                        </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image0" translatesAutoresizingMaskIntoConstraints="NO" id="FBy-vh-8BT">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image4" translatesAutoresizingMaskIntoConstraints="NO" id="FBy-vh-8BT">
                                             <rect key="frame" x="35" y="6" width="30" height="30"/>
                                             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
@@ -71,6 +65,12 @@
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="image0" translatesAutoresizingMaskIntoConstraints="NO" id="4FQ-rU-z37">
+                                            <rect key="frame" x="35" y="43" width="250" height="250"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="4FQ-rU-z37" secondAttribute="height" multiplier="1:1" id="Jt5-GA-rie"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="FBy-vh-8BT" firstAttribute="leading" secondItem="2PT-FQ-YIg" secondAttribute="leading" constant="35" id="0SZ-2x-I3i"/>
@@ -114,10 +114,10 @@
             </objects>
             <point key="canvasLocation" x="518" y="315"/>
         </scene>
-        <!--Camera View Controller-->
+        <!--Picture View Controller-->
         <scene sceneID="BuE-yK-zzY">
             <objects>
-                <viewController id="ekO-uj-Oaw" customClass="CameraViewController" customModule="BarApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ekO-uj-Oaw" customClass="PictureViewController" customModule="BarApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cxS-q8-GHf"/>
                         <viewControllerLayoutGuide type="bottom" id="ND8-FW-5I7"/>
@@ -185,6 +185,7 @@
     </scenes>
     <resources>
         <image name="image0" width="320" height="320"/>
+        <image name="image4" width="320" height="320"/>
         <image name="placeholder" width="105" height="19"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

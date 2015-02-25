@@ -18,7 +18,10 @@ struct Bar {
     init(index: Int){
         let barsLibrary = BarLibrary().library
         let barDictionary = barsLibrary[index]
-                
+        
+        
+       // let userImageFile = anotherPhoto[] as PFile
+        
         imageNamesArray = ["image0.png", "image1.png", "image2.png", "image3.png", "image4.png"]
 
         
