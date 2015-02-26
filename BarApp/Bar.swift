@@ -18,11 +18,14 @@ struct Bar {
     init(index: Int){
         let barsLibrary = BarLibrary().library
         let barDictionary = barsLibrary[index]
-                
+        
+        
+       // let userImageFile = anotherPhoto[] as PFile
+        
         imageNamesArray = ["image0.png", "image1.png", "image2.png", "image3.png", "image4.png"]
 
         
-        //title = barDictionary["title"] as String!
+        title = barDictionary["title"] as String!
         //description = playlistDictionary["description"] as String!
         
         let iconName = barDictionary["icon"] as String!

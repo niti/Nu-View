@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D348ED51A9AEB480068F606 /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D348ED41A9AEB480068F606 /* PictureViewController.swift */; };
 		C290C4FC1A93B4EE00177A63 /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C290C4FB1A93B4EE00177A63 /* Bar.swift */; };
 		C290C50A1A96348700177A63 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C290C5091A96348700177A63 /* CameraViewController.swift */; };
 		C2A930721A8F0A4E00EAB993 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A930711A8F0A4E00EAB993 /* AppDelegate.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9D348ED41A9AEB480068F606 /* PictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
 		C290C4FB1A93B4EE00177A63 /* Bar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
 		C290C5091A96348700177A63 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		C2A9306C1A8F0A4E00EAB993 /* BarApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,6 +146,7 @@
 				C2D211261A990B370089D5A2 /* BarListTableViewCell.swift */,
 				C2D2112A1A991D800089D5A2 /* BarDetailTableViewCell.swift */,
 				C2D2112B1A991D800089D5A2 /* BarDetailTableViewController.swift */,
+				9D348ED41A9AEB480068F606 /* PictureViewController.swift */,
 				C290C5091A96348700177A63 /* CameraViewController.swift */,
 				C2D211501A9AC95D0089D5A2 /* BarLibrary.swift */,
 				C290C4FB1A93B4EE00177A63 /* Bar.swift */,
@@ -252,6 +255,7 @@
 				TargetAttributes = {
 					C2A9306B1A8F0A4E00EAB993 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = J4225J5NH5;
 					};
 					C2A930801A8F0A4E00EAB993 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -311,6 +315,7 @@
 				C2D211251A990B1A0089D5A2 /* BarListTableViewController.swift in Sources */,
 				C2D2112C1A991D800089D5A2 /* BarDetailTableViewCell.swift in Sources */,
 				C2D211271A990B370089D5A2 /* BarListTableViewCell.swift in Sources */,
+				9D348ED51A9AEB480068F606 /* PictureViewController.swift in Sources */,
 				C2A930721A8F0A4E00EAB993 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

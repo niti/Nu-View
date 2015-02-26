@@ -25,22 +25,53 @@ class BarDetailTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func loadImage(image: String) {
-        barDetailImageCell.image = UIImage(named: image)
+    func loadImage(image: UIImage, bar: Bar) {
+
         
-        if PFUser.currentUser() != nil {
-            let user = PFUser.currentUser()
-            //println(user["imageData"])
-            
-            if let data: NSData = user["image"] as? NSData {
-                profilePicture.image = UIImage(data: data)
-            }
-            userName.text = user["name"] as? String
-        }
+        // User data
+//        if PFUser.currentUser() != nil {
+//            let user = PFUser.currentUser()
+//            //println(user["imageData"])
+//            
+//            if let data: NSData = user["image"] as? NSData {
+//                profilePicture.image = UIImage(data: data)
+//            }
+//            userName.text = user["name"] as? String
+//        }
+//        
+//        else {
+//            println("No User")
+//        }
         
-        else {
-            println("No User")
-        }
+        
+        // Pictures data
+        
+        self.barDetailImageCell.image = image
+        
+//        var query = PFQuery(className: bar.title)
+//        query.whereKey("objectId", equalTo:image)
+//        
+//        query.findObjectsInBackgroundWithBlock {
+//            (objects: [AnyObject]!, error: NSError!) -> Void in
+//            if error == nil {
+//                println("Successfully retrieved \(objects.count) records.")
+//                for object in objects {
+//                    let userImageFile = object["imageFile"] as PFFile!
+//                    userImageFile.getDataInBackgroundWithBlock {
+//                        (imageData: NSData!, error: NSError!) -> Void in
+//                        if error == nil {
+//                            self.barDetailImageCell.image = UIImage(data:imageData)!
+//                            println("Image successfully retrieved")
+//                        }
+//                    }
+//                }
+//                
+//            } else {
+//                NSLog("Error: %@ %@", error, error.userInfo!)
+//            }
+//        }
+        
+        
     }
 
 }
