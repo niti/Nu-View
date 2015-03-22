@@ -19,26 +19,14 @@ struct Bar {
         let barsLibrary = BarLibrary().library
         let barDictionary = barsLibrary[index]
         
-        
-       // let userImageFile = anotherPhoto[] as PFile
-        
-        imageNamesArray = ["image0.png", "image1.png", "image2.png", "image3.png", "image4.png"]
+        //var barTitle: String = PFCloud.callFunction("getBarTitle", withParameters: ["index" : index])
+        //var barIcon: String = PFCloud.callFunction("getBarIcon", withParameters: ["index" : index])
 
-        
+                
         title = barDictionary["title"] as String!
-        //description = playlistDictionary["description"] as String!
-        
         let iconName = barDictionary["icon"] as String!
         icon = UIImage(named: iconName)
-        //imageNamesArray = barDictionary["images"] as [String]
-        
-        //let largeIconName = playlistDictionary["largeIcon"] as String!
-        //largeIcon = UIImage(named: largeIconName)
-        
-        //artists += playlistDictionary["artists"] as [String]
-        
-        //let colorDictionary = playlistDictionary["backgroundColor"] as [String: CGFloat]!
-        //backgroundColor = rgbColorFromDictionary(colorDictionary)
+
         
     }
     

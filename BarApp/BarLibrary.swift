@@ -32,12 +32,12 @@ struct BarLibrary {
         ],
         
         [
-            "title": "Michael's Bistro",
+            "title": "Michaels",
             "icon": "michaels.png",
         ],
         
         [
-            "title": "St. Maarten",
+            "title": "Maarten",
             "icon": "stmaarten.png",
         ],
         

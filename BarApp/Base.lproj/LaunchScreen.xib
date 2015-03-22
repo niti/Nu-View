@@ -13,17 +13,20 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="95s-tN-cwh">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="  Copyright (c) 2015 Allison Moyer. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="8ie-xW-0ye">
-                    <rect key="frame" x="20" y="626" width="335" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="MXt-ih-rxT">
+                    <rect key="frame" x="47" y="61" width="280" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="1I0-r6-12j"/>
+                        <constraint firstAttribute="width" constant="280" id="2ru-qz-dGA"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="95s-tN-cwh" secondAttribute="trailing" id="1tG-Kq-em8"/>
                 <constraint firstItem="95s-tN-cwh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="7Y3-1f-XNU"/>
+                <constraint firstItem="MXt-ih-rxT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="61" id="7Zv-em-wxL"/>
+                <constraint firstAttribute="centerX" secondItem="MXt-ih-rxT" secondAttribute="centerX" id="HmP-SY-Bgh"/>
                 <constraint firstItem="95s-tN-cwh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="LM5-Qo-NDa"/>
                 <constraint firstAttribute="bottom" secondItem="95s-tN-cwh" secondAttribute="bottom" id="aHE-N2-rrl"/>
             </constraints>
@@ -33,7 +36,8 @@
         </view>
     </objects>
     <resources>
-        <image name="splash" width="320" height="568"/>
+        <image name="logo" width="721" height="478"/>
+        <image name="splash" width="640" height="1136"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

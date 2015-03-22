@@ -37,6 +37,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         application.setStatusBarStyle(UIStatusBarStyle.LightContent, animated: false)
         
+//        var controller:PFQueryTableViewController = PFQueryTableViewController()
+//        self.window?.rootViewController = controller
+//        self.window?.makeKeyAndVisible()
+        
         
         return true
     }

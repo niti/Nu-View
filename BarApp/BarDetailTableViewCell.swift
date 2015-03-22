@@ -8,11 +8,16 @@
 
 import UIKit
 
-class BarDetailTableViewCell: UITableViewCell {
+class BarDetailTableViewCell: PFTableViewCell {
 
+    @IBOutlet weak var numOfLikes: UILabel!
     @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet weak var userName: UILabel!
-    @IBOutlet weak var barDetailImageCell: UIImageView!
+    @IBOutlet weak var timeSincePost: UILabel!
+    @IBOutlet weak var barDetailImageCell: PFImageView!
+    
+    var object: PFObject!
+    var liked: Bool = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,6 +32,7 @@ class BarDetailTableViewCell: UITableViewCell {
     
     func loadImage(image: UIImage, bar: Bar) {
 
+        
         
         // User data
 //        if PFUser.currentUser() != nil {

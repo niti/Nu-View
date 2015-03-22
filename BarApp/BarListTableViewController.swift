@@ -23,21 +23,6 @@ class BarListTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        Parse.setApplicationId("ob4d8n1TNor1eUTZ4hmQjFhC7w58cifNLMTBJ7Zh", clientKey: "o9zu5lMz0AjOY2E0oVzpEnvXq8hxNZbqJzPhqbWt")
-//        
-//        var score = PFObject(className: "score")
-//        score.setObject("Rob", forKey: "name")
-//        score.setObject(95, forKey: "number")
-//        score.saveInBackgroundWithBlock {
-//            (success: Bool!, error: NSError!) -> Void in
-//            }
-//        
-//        var query = PFQuery(className: "score")
-//        
-//        
-        
-        //PFUser.logOut()
 
         if PFUser.currentUser()["name"] == nil {
            self.loadData() 
@@ -58,13 +43,14 @@ class BarListTableViewController: UITableViewController {
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
     override func viewWillAppear(animated: Bool){
         self.navigationController?.navigationBarHidden = false
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "navbar.png"), forBarMetrics: .Default)
+        self.navigationController?.navigationBar.backgroundColor = UIColor(white: 0, alpha: 1)
+//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "navbar.png"), forBarMetrics: .Default)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "splash.png")!)
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
     }
 
     override func didReceiveMemoryWarning() {
@@ -89,6 +75,8 @@ class BarListTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> BarListTableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("barListTableCell", forIndexPath: indexPath) as BarListTableViewCell
         
+        cell.backgroundColor = UIColor.clearColor()
+        //cell.
         
         cell.loadImage(imagesArray[indexPath.row])
         
@@ -127,7 +115,7 @@ class BarListTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView,
         estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-            return 87;
+            return 75;
     }
     
     
