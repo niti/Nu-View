@@ -87,14 +87,56 @@ class BarDetailTableViewController: PFQueryTableViewController, UIImagePickerCon
         
             cell.object = object
             
-            // Extract values from the PFObject to display in the table cell        
-            var userQuery = PFUser.query()
-            var userRef = object["user"] as PFObject
-            userQuery.whereKey("objectId", equalTo: userRef.objectId)
-            var user = userQuery.findObjects().first as PFUser
+            var userName = String()
+            var profilePicture = UIImage()
+            println(indexPath.item)
+            // Check if user values exist
+            if (usernames.count > indexPath.item){
+                userName = usernames[indexPath.item]
+                profilePicture = profilePictures[indexPath.item]
+            }
+            if (userName.isEmpty) {
+                
+                // Extract values from the PFObject to display in the table cell
+                var userQuery = PFUser.query()
+                var userRef = object["user"] as PFObject
+                userQuery.whereKey("objectId", equalTo: userRef.objectId)
+                userQuery.findObjectsInBackgroundWithBlock( {
+                    (objects:[AnyObject]!, error: NSError!) in
+                    if(error == nil){
+                        
+                        if let userObjects = objects as? [PFUser] {
+                            var user = userObjects.first as PFUser!
+                            var userName = user["name"] as String
+                            var profilePicture = UIImage(data: user["image"] as NSData)!
+                            
+                            self.usernames.append(userName)
+                            self.profilePictures.append(profilePicture)
+                            
+//                            self.usernames.insert(userName, atIndex: indexPath.item)
+//                            self.profilePictures.insert(profilePicture, atIndex: indexPath.item)
+                            
+                            cell.userName.text = userName
+                            cell.profilePicture.image = profilePicture
+                        }
+                        
+                        
+                    }
+                    else{
+                        println("Error in retrieving \(error)")
+                    }
+                    
+                })
+                
+            } else {
+                cell.userName.text = userName
+                cell.profilePicture.image = profilePicture
+            }
             
-            cell.userName.text = user["name"] as? String
-            cell.profilePicture.image = UIImage(data: user["image"] as NSData)!
+            //.first as PFUser
+            
+            //cell.userName.text = user["name"] as? String
+            //cell.profilePicture.image = UIImage(data: user["image"] as NSData)!
             
 
     //        let imageView = PFImageView()
@@ -140,7 +182,7 @@ class BarDetailTableViewController: PFQueryTableViewController, UIImagePickerCon
             }
             
             var imageFile = object["imageFile"] as PFFile
-            cell.barDetailImageCell.image = UIImage(named: "image1.png")
+
             var image = self.imageCache[imageFile.name]
             
             
@@ -164,11 +206,12 @@ class BarDetailTableViewController: PFQueryTableViewController, UIImagePickerCon
             
             if (image == nil) {
                 cell.barDetailImageCell.file = imageFile
-                if (cell.barDetailImageCell.file.isDataAvailable) {
+                //if (cell.barDetailImageCell.file.isDataAvailable) {
                     cell.barDetailImageCell.loadInBackground({ (image, error) -> Void in
                         self.imageCache[imageFile.name] = image
                     })
-                }
+//                }
+                
             } else {
                 cell.barDetailImageCell.image = image
             }
@@ -202,7 +245,7 @@ class BarDetailTableViewController: PFQueryTableViewController, UIImagePickerCon
             object["likes"] = (numLikes + 1)
             object.saveInBackgroundWithBlock { (success, error) -> Void in
                 if (success) {
-                    println(numLikes+1)
+                    //println(numLikes+1)
                     image.liked = true
                 }
             }
@@ -320,8 +363,12 @@ class BarDetailTableViewController: PFQueryTableViewController, UIImagePickerCon
     
     override func viewWillAppear(animated: Bool){
         //updatePictures()
+        
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.BlackTranslucent  // optional
+        //self.navigationController.navigationBar.translucent = YES
+        
         self.navigationController?.navigationBarHidden = false
-        self.navigationController?.navigationBar.backgroundColor = UIColor(white: 0, alpha: 1)
+        //self.navigationController?.navigationBar.backgroundColor = UIColor(white: 1, alpha: 1)
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "navbar.png"), forBarMetrics: .Default)
     }
 
@@ -383,10 +430,7 @@ class BarDetailTableViewController: PFQueryTableViewController, UIImagePickerCon
             return 350;
     }
     
-    
-    
-    
-    
+
     
     //Camera
     
@@ -455,6 +499,8 @@ class BarDetailTableViewController: PFQueryTableViewController, UIImagePickerCon
                             // Handle success or failure here ...
                             if succeeded == true {
                                 self.activityIndicator.stopAnimating()
+                                self.usernames.removeAll(keepCapacity: true)
+                                self.profilePictures.removeAll(keepCapacity: true)
                                 self.loadObjects()
                             }
                         })

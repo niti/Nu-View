@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="m0n-wW-OZ5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="m0n-wW-OZ5">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -43,7 +43,7 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e0V-bk-Ttt" id="2PT-FQ-YIg">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0m" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uj7-9K-KQD">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uj7-9K-KQD">
                                             <rect key="frame" x="61" y="33" width="38" height="14"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="14" id="0yf-br-BF7"/>
@@ -52,8 +52,8 @@
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User name goes here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nA-dj-9w1">
-                                            <rect key="frame" x="60" y="20" width="201" height="12"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anonymous" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nA-dj-9w1">
+                                            <rect key="frame" x="60" y="20" width="201" height="13"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="201" id="nap-Mf-efq"/>
                                             </constraints>
@@ -61,7 +61,7 @@
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u8W-MA-foF">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilepictureplaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="u8W-MA-foF">
                                             <rect key="frame" x="23" y="17" width="30" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="CLK-AT-v3H"/>
@@ -77,7 +77,7 @@
                                                 <constraint firstAttribute="height" constant="275" id="Ygp-B1-T8o"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3L-LI-84d">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3L-LI-84d">
                                             <rect key="frame" x="269" y="20" width="29" height="29"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="y3L-LI-84d" secondAttribute="height" multiplier="1:1" id="M3t-s1-Bcg"/>
@@ -93,7 +93,7 @@
                                         <constraint firstAttribute="centerX" secondItem="4FQ-rU-z37" secondAttribute="centerX" id="9GK-Yt-oye"/>
                                         <constraint firstItem="3nA-dj-9w1" firstAttribute="top" secondItem="2PT-FQ-YIg" secondAttribute="top" constant="20" id="BSt-eH-HFq"/>
                                         <constraint firstItem="u8W-MA-foF" firstAttribute="top" secondItem="2PT-FQ-YIg" secondAttribute="top" constant="17" id="Bwx-xG-eHe"/>
-                                        <constraint firstItem="Uj7-9K-KQD" firstAttribute="top" secondItem="3nA-dj-9w1" secondAttribute="bottom" constant="1" id="JTh-Vh-SuG"/>
+                                        <constraint firstItem="Uj7-9K-KQD" firstAttribute="top" secondItem="3nA-dj-9w1" secondAttribute="bottom" id="JTh-Vh-SuG"/>
                                         <constraint firstItem="4FQ-rU-z37" firstAttribute="top" secondItem="u8W-MA-foF" secondAttribute="bottom" constant="5" id="MI5-JP-hzy"/>
                                         <constraint firstItem="4FQ-rU-z37" firstAttribute="top" secondItem="y3L-LI-84d" secondAttribute="bottom" constant="3" id="NFV-ea-sId"/>
                                         <constraint firstItem="y3L-LI-84d" firstAttribute="leading" secondItem="3nA-dj-9w1" secondAttribute="trailing" constant="8" id="PtD-YW-iWh"/>
@@ -101,7 +101,7 @@
                                         <constraint firstItem="Uj7-9K-KQD" firstAttribute="leading" secondItem="u8W-MA-foF" secondAttribute="trailing" constant="8" id="REZ-OC-UpX"/>
                                         <constraint firstItem="3nA-dj-9w1" firstAttribute="leading" secondItem="u8W-MA-foF" secondAttribute="trailing" constant="7" id="Ud3-Md-IMM"/>
                                         <constraint firstAttribute="trailing" secondItem="Uj7-9K-KQD" secondAttribute="trailing" constant="221" id="cg0-Va-xws"/>
-                                        <constraint firstItem="Uj7-9K-KQD" firstAttribute="top" secondItem="3nA-dj-9w1" secondAttribute="bottom" constant="1" id="okW-sP-Cgq"/>
+                                        <constraint firstItem="Uj7-9K-KQD" firstAttribute="top" secondItem="3nA-dj-9w1" secondAttribute="bottom" id="okW-sP-Cgq"/>
                                         <constraint firstAttribute="bottom" secondItem="4FQ-rU-z37" secondAttribute="bottom" constant="22" id="t1w-gY-kPx"/>
                                         <constraint firstItem="3nA-dj-9w1" firstAttribute="leading" secondItem="u8W-MA-foF" secondAttribute="trailing" constant="7" id="z0O-Ya-Dzl"/>
                                     </constraints>
@@ -267,6 +267,7 @@
         <image name="facebooklogin" width="537" height="112"/>
         <image name="logo" width="721" height="478"/>
         <image name="placeholder" width="105" height="19"/>
+        <image name="profilepictureplaceholder" width="60" height="60"/>
         <image name="splash" width="640" height="1136"/>
         <image name="trinity" width="300" height="63"/>
     </resources>

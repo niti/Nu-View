@@ -267,7 +267,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C2A930671A8F0A4D00EAB993 /* Build configuration list for PBXProject "NightFly" */;
+			buildConfigurationList = C2A930671A8F0A4D00EAB993 /* Build configuration list for PBXProject "Night-Fly" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -513,7 +513,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C2A930671A8F0A4D00EAB993 /* Build configuration list for PBXProject "NightFly" */ = {
+		C2A930671A8F0A4D00EAB993 /* Build configuration list for PBXProject "Night-Fly" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C2A930891A8F0A4F00EAB993 /* Debug */,

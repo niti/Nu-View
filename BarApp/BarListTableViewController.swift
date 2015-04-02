@@ -47,8 +47,17 @@ class BarListTableViewController: UITableViewController {
     
     override func viewWillAppear(animated: Bool){
         self.navigationController?.navigationBarHidden = false
-        self.navigationController?.navigationBar.backgroundColor = UIColor(white: 0, alpha: 1)
-//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "navbar.png"), forBarMetrics: .Default)
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.BlackTranslucent
+        
+        var label = UILabel()
+        //label.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
+        label.textAlignment = NSTextAlignment.Center
+        // ^-Use UITextAlignmentCenter for older SDKs.
+        label.textColor = UIColor.whiteColor()
+        label.text = "Night Fly"
+        self.navigationController?.navigationItem.titleView = label
+        
+    //        self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "navbar.png"), forBarMetrics: .Default)
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "splash.png")!)
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
     }
